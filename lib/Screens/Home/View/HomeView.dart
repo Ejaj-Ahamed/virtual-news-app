@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_news_app/Screens/NewsScreen/View/NewsView.dart';
 
 class HomeView extends StatefulWidget {
   @override
@@ -8,6 +9,29 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        backgroundColor: Colors.grey[200],
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          bottom: TabBar(
+            tabs: [
+              Tab(text: "HOME"),
+              Tab(text: "TRENDING"),
+              Tab(text: "FEATURED"),
+            ],
+          ),
+          title: Text('Virtual News App'),
+        ),
+        body: TabBarView(
+          children: [
+            NewsView(),
+            Icon(Icons.directions_transit),
+            Icon(Icons.directions_bike),
+          ],
+        ),
+      ),
+    );
   }
 }
