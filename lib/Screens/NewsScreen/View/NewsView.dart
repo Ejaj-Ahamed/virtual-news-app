@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
@@ -34,7 +36,10 @@ class _NewsViewState extends State<NewsView> {
           setState(() {
             isLoadingMore = true;
           });
-          loadMore();
+          Timer(Duration(seconds: 3), () {
+            print("timer called");
+            loadMore();
+          });
         }
       }
       if (_scrollController.position.userScrollDirection ==
@@ -59,6 +64,10 @@ class _NewsViewState extends State<NewsView> {
   }
 
   loadNews() async {
+    newsList = [];
+    recyclerNewsList = [];
+    displaiedNewsCounter = 0;
+    displayingThreshold = 5;
     newsList = await newsController.getAllNews();
     if (newsList.first.responseMessge == "") {
       loadMore();
@@ -112,7 +121,10 @@ class _NewsViewState extends State<NewsView> {
         visible: _fabIsVisible,
         child: FloatingActionButton(
           onPressed: () {
-            // Add your onPressed code here!
+            setState(() {
+              isLoadingMore = true;
+            });
+            loadNews();
           },
           child: const Icon(Icons.refresh_outlined),
           backgroundColor: Colors.green,
