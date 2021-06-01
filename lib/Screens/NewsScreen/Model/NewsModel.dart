@@ -1,5 +1,4 @@
 class NewsModel {
-  int id = 0;
   String newsSource = "";
   String newsAuthor = "";
   String newsTitle = "";
@@ -7,15 +6,16 @@ class NewsModel {
   String newsUrl = "";
   String newsImage = "";
   String newsPublishedAt = "";
+  String responseMessge = "";
 
-  NewsModel({
-    required this.id,
-    required this.newsSource,
-    required this.newsAuthor,
-    required this.newsTitle,
-    required this.newsDescription,
-    required this.newsUrl,
-    required this.newsImage,
-    required this.newsPublishedAt,
-  });
+  NewsModel(
+    this.newsSource,
+    this.newsAuthor,
+    this.newsTitle,
+    this.newsDescription,
+    this.newsUrl,
+    this.newsImage,
+    this.newsPublishedAt,
+    this.responseMessge,
+  );
 }

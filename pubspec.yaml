@@ -32,6 +32,7 @@ dependencies:
   http: ^0.13.3
   url_launcher: ^6.0.4
   flutter_statusbarcolor_ns: ^0.3.0-nullsafety
+  shimmer: ^2.0.0
 
 dev_dependencies:
   flutter_test:

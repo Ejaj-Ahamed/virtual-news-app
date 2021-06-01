@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:virtual_news_app/Screens/Home/Bindings/HomeBinding.dart';
 import 'package:virtual_news_app/Screens/Home/View/HomeView.dart';
 
 void main() {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       getPages: [GetPage(name: "/home", page: () => HomeView())],
       initialRoute: "/home",
+      initialBinding: HomeBinding(),
     );
   }
 }
