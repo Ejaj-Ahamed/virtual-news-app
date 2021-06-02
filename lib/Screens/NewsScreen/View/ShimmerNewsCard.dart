@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:virtual_news_app/Services/Constants.dart';
+
+Constants constants = Get.find();
 
 class ShimmerNewsCard extends StatelessWidget {
   final int duration;
@@ -14,7 +17,7 @@ class ShimmerNewsCard extends StatelessWidget {
       margin: EdgeInsets.only(top: 10, bottom: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5.0),
-        color: Constants.getColorFromHex("#FFFFFF"),
+        color: constants.getColorFromHex("#FFFFFF"),
         boxShadow: [
           BoxShadow(
             color: Colors.grey,
@@ -35,8 +38,8 @@ class ShimmerNewsCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(5.0),
               ),
             ),
-            baseColor: Constants.getColorFromHex("#EEEEEE"),
-            highlightColor: Constants.getColorFromHex("#BDBDBD"),
+            baseColor: constants.getColorFromHex("#EEEEEE"),
+            highlightColor: constants.getColorFromHex("#BDBDBD"),
             period: Duration(milliseconds: shimmerDuration),
           ),
           Container(
@@ -46,8 +49,8 @@ class ShimmerNewsCard extends StatelessWidget {
                 height: 20,
                 color: Colors.blue,
               ),
-              baseColor: Constants.getColorFromHex("#EEEEEE"),
-              highlightColor: Constants.getColorFromHex("#BDBDBD"),
+              baseColor: constants.getColorFromHex("#EEEEEE"),
+              highlightColor: constants.getColorFromHex("#BDBDBD"),
               period: Duration(milliseconds: shimmerDuration),
             ),
           ),
@@ -58,8 +61,8 @@ class ShimmerNewsCard extends StatelessWidget {
                 height: 50,
                 color: Colors.blue,
               ),
-              baseColor: Constants.getColorFromHex("#EEEEEE"),
-              highlightColor: Constants.getColorFromHex("#BDBDBD"),
+              baseColor: constants.getColorFromHex("#EEEEEE"),
+              highlightColor: constants.getColorFromHex("#BDBDBD"),
               period: Duration(milliseconds: shimmerDuration),
             ),
           ),
@@ -70,8 +73,8 @@ class ShimmerNewsCard extends StatelessWidget {
                 height: 20,
                 color: Colors.blue,
               ),
-              baseColor: Constants.getColorFromHex("#EEEEEE"),
-              highlightColor: Constants.getColorFromHex("#BDBDBD"),
+              baseColor: constants.getColorFromHex("#EEEEEE"),
+              highlightColor: constants.getColorFromHex("#BDBDBD"),
               period: Duration(milliseconds: shimmerDuration),
             ),
           ),
@@ -82,8 +85,8 @@ class ShimmerNewsCard extends StatelessWidget {
                 height: 20,
                 color: Colors.blue,
               ),
-              baseColor: Constants.getColorFromHex("#EEEEEE"),
-              highlightColor: Constants.getColorFromHex("#BDBDBD"),
+              baseColor: constants.getColorFromHex("#EEEEEE"),
+              highlightColor: constants.getColorFromHex("#BDBDBD"),
               period: Duration(milliseconds: shimmerDuration),
             ),
           ),

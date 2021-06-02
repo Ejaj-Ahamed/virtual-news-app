@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:virtual_news_app/Screens/NewsScreen/Model/NewsModel.dart';
 import 'package:virtual_news_app/Services/Constants.dart';
+
+Constants constants = Get.find();
 
 class NewsCard extends StatefulWidget {
   final NewsModel newsModel;
@@ -17,7 +20,7 @@ class _NewsCardState extends State<NewsCard> {
       margin: EdgeInsets.only(top: 10, bottom: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5.0),
-        color: Constants.getColorFromHex("#FFFFFF"),
+        color: constants.getColorFromHex("#FFFFFF"),
         boxShadow: [
           BoxShadow(
             color: Colors.grey,

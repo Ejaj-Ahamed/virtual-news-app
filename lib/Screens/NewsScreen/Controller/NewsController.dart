@@ -2,6 +2,9 @@ import 'package:get/get.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:virtual_news_app/Screens/NewsScreen/Model/NewsModel.dart';
+import 'package:virtual_news_app/Services/Constants.dart';
+
+Constants constants = Get.find();
 
 class NewsController extends GetxController {
   Future<List<NewsModel>> getAllNews() async {
@@ -30,9 +33,9 @@ class NewsController extends GetxController {
       String newsSource = source['name'] ?? "Unknown";
       String newsAuthor = article['author'] ?? "Unknown";
       String newsTitle = article['title'] ?? "";
-      String newsDescription = article['description'];
+      String newsDescription = article['description'] ?? "";
       String newsUrl = article['url'] ?? "";
-      String newsImage = article['urlToImage'] ?? "";
+      String newsImage = article['urlToImage'] ?? constants.notFoundImage;
       String newsPublishedAt = article['publishedAt'] ?? "";
       String responseMessge = "";
       nm.add(new NewsModel(newsSource, newsAuthor, newsTitle, newsDescription,

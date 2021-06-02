@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:virtual_news_app/Screens/Login/View/LoginView.dart';
 import 'package:virtual_news_app/Screens/NewsScreen/View/NewsView.dart';
 
 class HomeView extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomeViewState extends State<HomeView> {
           bottom: TabBar(
             tabs: [
               Tab(text: "HOME"),
-              Tab(text: "TRENDING"),
+              Tab(text: "LOGIN"),
               Tab(text: "FEATURED"),
             ],
           ),
@@ -27,7 +28,7 @@ class _HomeViewState extends State<HomeView> {
         body: TabBarView(
           children: [
             NewsView(),
-            Icon(Icons.directions_transit),
+            LoginVIew(),
             Icon(Icons.directions_bike),
           ],
         ),
